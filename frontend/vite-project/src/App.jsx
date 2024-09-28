@@ -28,7 +28,8 @@ function App() {
   const handleSearch = async () => {
     try {
       // Fetch data from the server
-      const response = await fetch(`http://localhost:5000/search?query=${searchTerm}`);
+      const response = await fetch(`https://search-app-vert.vercel.app
+/search?query=${searchTerm}`);
       if (!response.ok) {
         throw new Error('Error fetching data');
       }
