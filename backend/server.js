@@ -9,7 +9,7 @@ const port = 5000;
 
 // Use CORS to allow cross-origin requests
 app.use(cors(
-    origin : ["https://search-app-frontend-two.vercel.app/"],
+    origin : ["https://search-app-frontend-two.vercel.app"],
     methods : ["POST","GET"],
     credentials : true
 ));
