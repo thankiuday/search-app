@@ -8,11 +8,11 @@ const app = express();
 const port = 5000;
 
 // Use CORS to allow cross-origin requests
-app.use(cors(
-    origin : ["https://search-app-frontend-two.vercel.app"],
-    methods : ["POST","GET"],
-    credentials : true
-));
+app.use(cors({
+  origin: 'https://search-app-frontend-two.vercel.app', // Frontend URL
+  methods: 'GET,POST',  // Allowed methods
+  credentials: true      // Allow cookies if needed
+}));
 
 const YOUTUBE_API_KEY =  process.env.VITE_YOUTUBE_API_KEY;
 const GOOGLE_CUSTOM_SEARCH_API_KEY =  process.env.VITE_GOOGLE_CUSTOM_SEARCH_API_KEY; 
