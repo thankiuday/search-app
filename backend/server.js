@@ -52,6 +52,11 @@ app.get('/search', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+// app.listen(port, () => {
+//     console.log(`Server is running on http://localhost:${port}`);
+// });
+const HOST = '0.0.0.0';  // Add this line
+app.listen(port, HOST, () => {
+  console.log(`Server running on http://${HOST}:${port}`);
 });
+
